@@ -4,8 +4,9 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
 
-const CommentSection = props => {
+const CommentSection = (props) => {
   // Add state for the comments
+
   let [comments] = useState(props.comments)
 
   return (
@@ -15,6 +16,14 @@ const CommentSection = props => {
         <Comment 
         key = {index}
         comment = {comment}/>
+
+  const [comments] = useState(props.comments);
+  console.log("This is from Components/ CommnetSectionContainer", props);
+  return (
+    <div>
+      {/* map through the comments data and return the Comment component */}
+      {comments.map((c, index) => (
+
       ))}
       <CommentInput />
     </div>
